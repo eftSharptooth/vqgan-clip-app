@@ -4,7 +4,7 @@ ADD . /code
 COPY . /code
 WORKDIR /code
 #COPY requirements.txt ./requirements.txt
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && apt-get install -y git && apt-get install -y curl
 RUN pip install -r requirements.txt
 EXPOSE 8501
 
@@ -19,7 +19,7 @@ CMD [ "pip", "install -r requirements.txt" ]
 #ADD logic.py /
 #ADD gallery_utils.py /
 #ADD vqgan_utils.py /
-CMD [ "bash", "./download-weights.sh" ]
+CMD [ "sh", "download-weights.sh" ]
 
 ENTRYPOINT ["streamlit", "run"]
 
