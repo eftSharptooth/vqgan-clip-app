@@ -1,4 +1,6 @@
-FROM python:3
+FROM python:3.8-ubuntu
+ADD . /code
+WORKDIR /code
 ADD app.py /
 ADD gallery.py /
 ADD logic.py /
