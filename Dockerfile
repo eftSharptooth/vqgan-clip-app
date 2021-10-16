@@ -12,6 +12,6 @@ ADD app.py /
 ADD gallery.py /
 ADD logic.py /
 ADD gallery_utils.py /
-ADD logic_utils.py /
+ADD vqgan_utils.py /
 CMD [ "bash", "./download-weights.sh" ]
 CMD [ "streamlit", "run app.py" ]
