@@ -10,6 +10,7 @@ EXPOSE 8501
 CMD [ "git", "clone https://github.com/eftSharptooth/vqgan-clip-app" ]
 CMD [ "cd", "vqgan-clipp-app" ]
 #RUN pip install -r requirements.txt
+CMD [ "git", "clone https://github.com/openai/CLIP" ]
 CMD [ "git", "clone https://github.com/CompVis/taming-transformers" ]
 CMD [ "pip", "install -r requirements.txt" ]
 #ADD app.py /
