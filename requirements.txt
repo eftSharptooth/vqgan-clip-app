@@ -20,3 +20,4 @@ pyyaml
 flask
 einops
 transformers
+git+https://github.com/openai/CLIP.git
