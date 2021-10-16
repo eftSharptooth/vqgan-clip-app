@@ -1,11 +1,6 @@
 FROM python:3.8
 ADD . /code
 WORKDIR /code
-ADD app.py /
-ADD gallery.py /
-ADD logic.py /
-ADD gallery_utils.py /
-ADD logic_utils.py /
 
 RUN pip install pytorch=1.8.1
 RUN pip install torchvision=0.9.1
@@ -34,5 +29,10 @@ RUN pip install
 CMD [ "git", "clone https://github.com/eftSharptooth/vqgan-clip-app" ]
 CMD [ "cd", "vqgan-clipp-app" ]
 CMD [ "git", "clone https://github.com/CompVis/taming-transformers" ]
+ADD app.py /
+ADD gallery.py /
+ADD logic.py /
+ADD gallery_utils.py /
+ADD logic_utils.py /
 CMD [ "bash", "./download-weights.sh" ]
 CMD [ "streamlit", "run app.py" ]
