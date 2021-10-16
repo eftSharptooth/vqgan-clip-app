@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM FROM pytorch/pytorch:1.9.0-cuda11.1-cudnn8-runtime
 
 ADD . /code
 COPY . /code
