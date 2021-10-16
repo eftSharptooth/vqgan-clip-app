@@ -1,7 +1,7 @@
-pytorch==1.8.1
-torchvision==0.9.1
+pytorch==1.8.0
+torchvision==0.9.0
 torchaudio==0.8.1
-cudatoolkit==10.2
+cudatoolkit==11.1
 omegaconf
 pytorch-lightning
 tqdm
