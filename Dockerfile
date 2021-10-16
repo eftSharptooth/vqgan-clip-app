@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install -y git && apt-get install -y curl
 RUN pip install -r requirements.txt
 EXPOSE 8501
 
-CMD [ "git", "clone https://github.com/eftSharptooth/vqgan-clip-app" ]
-CMD [ "cd", "vqgan-clipp-app" ]
+#CMD [ "git", "clone https://github.com/eftSharptooth/vqgan-clip-app" ]
+#CMD [ "cd", "vqgan-clipp-app" ]
 #RUN pip install -r requirements.txt
 CMD [ "git", "clone https://github.com/openai/CLIP" ]
 CMD [ "git", "clone https://github.com/CompVis/taming-transformers" ]
@@ -19,7 +19,7 @@ CMD [ "pip", "install -r requirements.txt" ]
 #ADD logic.py /
 #ADD gallery_utils.py /
 #ADD vqgan_utils.py /
-CMD [ "sh", "download-weights.sh" ]
+#CMD [ "sh", "download-weights.sh" ]
 
 ENTRYPOINT ["streamlit", "run"]
 
