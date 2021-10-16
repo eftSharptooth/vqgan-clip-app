@@ -3,7 +3,7 @@ FROM python:3.8
 ADD . /code
 COPY . /code
 WORKDIR /code
-COPY requirements.txt ./requirements.txt
+#COPY requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
 EXPOSE 8501
 
