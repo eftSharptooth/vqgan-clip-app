@@ -10,7 +10,7 @@ CMD [ "pip", "install -r requirements.txt" ]
 CMD [ "git", "clone https://github.com/CompVis/taming-transformers" ]
 ADD app.py /
 ADD gallery.py /
-ADD logic.py /
+#ADD logic.py /
 ADD gallery_utils.py /
 ADD vqgan_utils.py /
 CMD [ "bash", "./download-weights.sh" ]
