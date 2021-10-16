@@ -18,7 +18,7 @@ EXPOSE 8501
 ADD . /code
 WORKDIR /code
 COPY requirements.txt ./requirements.txt
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 EXPOSE 8501
 
 CMD [ "git", "clone https://github.com/eftSharptooth/vqgan-clip-app" ]
