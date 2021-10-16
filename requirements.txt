@@ -11,7 +11,6 @@ regex
 kornia
 ftfy
 pillow==7.1.2
-python==3.8
 imageio-ffmpeg==0.2.0
 ipykernel
 imageio
