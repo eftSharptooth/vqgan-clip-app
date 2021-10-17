@@ -1,7 +1,7 @@
 # Modify for different systems, e.g. larger default xdim/ydim for more powerful GPUs
 num_steps: 500
 Xdim: 640
-ydim: 360
+ydim: 350
 set_seed: false
 seed: 0
 use_starting_image: false
