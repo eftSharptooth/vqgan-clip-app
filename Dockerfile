@@ -12,8 +12,9 @@ EXPOSE 8501
 #CMD [ "cd", "vqgan-clipp-app" ]
 #RUN pip install -r requirements.txt
 CMD [ "git", "clone https://github.com/openai/CLIP" ]
-CMD [ "git", "clone https://github.com/CompVis/taming-transformers" ]
 CMD [ "pip", "install -r requirements.txt" ]
+CMD [ "cd", "code" ]
+CMD [ "git", "clone https://github.com/CompVis/taming-transformers" ]
 #ADD app.py /
 #ADD gallery.py /
 #ADD logic.py /
