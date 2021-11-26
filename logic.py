@@ -2,6 +2,8 @@ from typing import Optional, List, Tuple
 from PIL import Image
 import argparse
 import clip
+import os
+import GPUtil
 from vqgan_utils import (
     load_vqgan_model,
     MakeCutouts,
@@ -115,6 +117,15 @@ class VQGANCLIPRun(Run):
             display_freq=50,
             seed=seed,
         )
+        
+        gpu1, gpu2 = GPUtil.getGPUs()
+        os.environ['CUDA_​DEVICE_​ORDER'] = "PCI_BUS_ID"
+        print("gpu0:" + str(gpu1.memoryFree))
+        print("gpu1:" + str(gpu2.memoryFree))
+
+        available_gpu = gpu1 if gpu1.memoryFree > gpu2.memoryFree else gpu2
+        print("use GPU:" + str(available_gpu.id))
+        os.environ['CUDA_VISIBLE_DEVICES'] = str(available_gpu.id)
 
         device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         self.device = device
